@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+
+.loader {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* congrats page styling */
+.circle {
+  animation: circleAnimation 2s forwards;
+}
+
+.tick {
+  opacity: 0;
+  stroke-dasharray: 0;
+  animation: tickAnimation 2s forwards;
+}
+
+@keyframes circleAnimation {
+  to {
+      stroke-dasharray: 0;
+  }
+}
+
+@keyframes tickAnimation {
+  0% {
+      opacity: 0;
+      stroke-dasharray: 0;
+  }
+  100% {
+      opacity: 1;
+      stroke-dasharray: 100;
+  }
+}
